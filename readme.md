@@ -15,3 +15,42 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 - teachers
 - appeals
 - students
+
+## university
+- id
+- name
+- address
+- phone_number
+
+## departments
+- id 
+- id_university
+- name
+
+## degree_course
+- id
+- id_departmens
+- name
+
+## course
+- id 
+- id_degree_course
+- name
+- room
+
+## teachers
+- id
+- name
+- last_name
+
+## students
+- id
+- name
+- last_name
+- id_degree_course
+
+## appeals
+- id
+- id_course
+- id_student
+- votes

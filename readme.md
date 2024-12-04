@@ -43,7 +43,7 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 - name
 - last_name
 
-## students
+## students sstudents appels many to many with votes e creare un unica tabella
 - id
 - name
 - last_name

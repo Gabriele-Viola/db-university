@@ -16,6 +16,9 @@ WHERE year(date_of_birth) <= 2024-30
 and month(date_of_birth) < 12
 and day(date_of_birth) < 4;
 
+SELECT * FROM univesity_db.students
+WHERE TIMESTAMPDIFF(YEAR, `date_of_birth`, CURDATE()) > 30;
+
 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
 
 SELECT * FROM univesity_db.courses
@@ -42,10 +45,14 @@ SELECT COUNT(`id`) FROM univesity_db.departments;
 SELECT * FROM univesity_db.teachers
 Where isnull(phone);
 
+SELECT COUNT(`id`) AS 'no phone teachers'
+FROM `teachers`
+WHERE `phone` is null;
+
 9. Inserire nella tabella degli studenti un nuovo record con i propri dati (per il campo degree_id, inserire un valore casuale)
 
 insert into univesity_db.students (`degree_id`, `name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date`, `registration_number`, `email`)
-value(33, 'Gabriele', 'Viola', '1993-02-02', 'ABCCBA34N25H100P', '2024-08-28', 123456, 'GIOVA@GIOVA.IT');
+values(33, 'Gabriele', 'Viola', '1993-02-02', 'ABCCBA34N25H100P', '2024-08-28', 123456, 'GIOVA@GIOVA.IT');
 
 10. Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
 
